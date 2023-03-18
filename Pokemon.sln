@@ -17,7 +17,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pokemon.WebApi", "Pokemon.W
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Doc", "Doc", "{90C5566F-CF5F-49B0-9C21-A0D4CD32AA74}"
 	ProjectSection(SolutionItems) = preProject
+		requisitos.txt = requisitos.txt
 		teste.txt = teste.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Itens de Solução", "Itens de Solução", "{0DDA382F-5C3B-4669-BF72-F6FD2FE8FD4B}"
+	ProjectSection(SolutionItems) = preProject
+		PokemonDb = PokemonDb
 	EndProjectSection
 EndProject
 Global

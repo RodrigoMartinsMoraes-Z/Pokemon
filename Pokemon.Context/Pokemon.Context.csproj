@@ -41,7 +41,39 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MappingConfiguration\CapturedPokemonsMapping.cs" />
+    <Compile Include="MappingConfiguration\MasterMapping.cs" />
+    <Compile Include="MappingConfiguration\PokemonMapping.cs" />
+    <Compile Include="Migrations\202303182106599_InitialMigration.cs" />
+    <Compile Include="Migrations\202303182106599_InitialMigration.designer.cs">
+      <DependentUpon>202303182106599_InitialMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="PokemonDbContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Pokemon.Domain\Pokemon.Domain.csproj">
+      <Project>{80b8d4dd-efd3-4ddc-90f0-360d8b194c47}</Project>
+      <Name>Pokemon.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pokemon.Interfaces\Pokemon.Interfaces.csproj">
+      <Project>{d3bcfa15-2ac2-4f32-a383-4196f11c490b}</Project>
+      <Name>Pokemon.Interfaces</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="System.Data.SQLite">
+      <Version>1.0.117</Version>
+    </PackageReference>
+    <PackageReference Include="System.Data.SQLite.EF6">
+      <Version>1.0.117</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202303182106599_InitialMigration.resx">
+      <DependentUpon>202303182106599_InitialMigration.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

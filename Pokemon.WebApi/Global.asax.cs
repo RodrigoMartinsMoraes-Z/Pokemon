@@ -1,6 +1,16 @@
+using Pokemon.Context;
+using Pokemon.Interfaces;
+
+using SimpleInjector;
+using SimpleInjector.Integration.Web.Mvc;
+
 using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Data.Entity;
+using System.Data.Entity.Infrastructure;
 using System.Linq;
+using System.Runtime.Remoting.Contexts;
 using System.Web;
 using System.Web.Http;
 using System.Web.Mvc;
@@ -13,6 +23,15 @@ namespace Pokemon.WebApi
     {
         protected void Application_Start()
         {
+            var container = new Container();
+            string connectionString = ConfigurationManager.ConnectionStrings["PokemonDb"].ConnectionString;
+
+
+            container.Register<IContext, PokemonDbContext>(Lifestyle.Scoped);
+            container.Register<IDbConnectionFactory>(() => new SqlConnectionFactory(connectionString), Lifestyle.Singleton);
+
+            DependencyResolver.SetResolver(new SimpleInjectorDependencyResolver(container));
+
             AreaRegistration.RegisterAllAreas();
             GlobalConfiguration.Configure(WebApiConfig.Register);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
