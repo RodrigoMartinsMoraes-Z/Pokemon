@@ -14,5 +14,7 @@ namespace Pokemon.Domain.Masters
         public string UserName { get; set; }
         public string CPF { get; set; }
         public string Email { get; set; }
+
+        public virtual List<CapturedPokemons> PokeList { get; set; }
     }
 }
