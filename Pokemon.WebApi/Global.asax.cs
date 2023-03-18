@@ -26,9 +26,11 @@ namespace Pokemon.WebApi
             var container = new Container();
             string connectionString = ConfigurationManager.ConnectionStrings["PokemonDb"].ConnectionString;
 
+            // register the context
+            container.Register<PokemonDbContext>(Lifestyle.Scoped);
 
-            container.Register<IContext, PokemonDbContext>(Lifestyle.Scoped);
-            container.Register<IDbConnectionFactory>(() => new SqlConnectionFactory(connectionString), Lifestyle.Singleton);
+            // register the factory
+            container.Register<IDbContextFactory<PokemonDbContext>, PokemonDbContextFactory>(Lifestyle.Singleton);
 
             DependencyResolver.SetResolver(new SimpleInjectorDependencyResolver(container));
 

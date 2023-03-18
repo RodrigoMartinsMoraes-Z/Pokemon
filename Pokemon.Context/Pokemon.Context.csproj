@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PokemonDbContextFactory.cs" />
     <Compile Include="MappingConfiguration\CapturedPokemonsMapping.cs" />
     <Compile Include="MappingConfiguration\MasterMapping.cs" />
     <Compile Include="MappingConfiguration\PokemonMapping.cs" />
@@ -68,6 +69,9 @@
     </PackageReference>
     <PackageReference Include="System.Data.SQLite.EF6">
       <Version>1.0.117</Version>
+    </PackageReference>
+    <PackageReference Include="System.Data.SQLite.EF6.Migrations">
+      <Version>1.0.113</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>

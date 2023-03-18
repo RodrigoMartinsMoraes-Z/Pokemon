@@ -24,6 +24,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Itens de Solução", "Itens de Solução", "{0DDA382F-5C3B-4669-BF72-F6FD2FE8FD4B}"
 	ProjectSection(SolutionItems) = preProject
 		PokemonDb = PokemonDb
+		PokemonDb.db = PokemonDb.db
 	EndProjectSection
 EndProject
 Global

@@ -9,7 +9,7 @@ namespace Pokemon.Context
 {
     public class PokemonDbContext : DbContext, IContext
     {
-        public PokemonDbContext() : base()
+        public PokemonDbContext() : base("name=PokemonDb")
         {
         }
 
