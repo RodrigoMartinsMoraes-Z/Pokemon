@@ -25,5 +25,7 @@ namespace Pokemon.Context
 
             base.OnModelCreating(modelBuilder);
         }
+
+    
     }
 }

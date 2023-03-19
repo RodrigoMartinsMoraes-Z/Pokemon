@@ -14,5 +14,8 @@ namespace Pokemon.Interfaces
         DbSet<Domain.Pokemons.Pokemon> Pokemons { get; }
         DbSet<Master> Masters { get; }
         DbSet<CapturedPokemons> CapturedPokemons { get; }
+
+        int SaveChanges();
+        Task<int> SaveChangesAsync();
     }
 }

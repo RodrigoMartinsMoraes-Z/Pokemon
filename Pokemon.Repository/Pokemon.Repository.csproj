@@ -41,7 +41,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Master\MasterRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Pokemon.Domain\Pokemon.Domain.csproj">
+      <Project>{80b8d4dd-efd3-4ddc-90f0-360d8b194c47}</Project>
+      <Name>Pokemon.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pokemon.Interfaces\Pokemon.Interfaces.csproj">
+      <Project>{d3bcfa15-2ac2-4f32-a383-4196f11c490b}</Project>
+      <Name>Pokemon.Interfaces</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="EntityFramework">
+      <Version>6.4.4</Version>
+    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

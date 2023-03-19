@@ -49,10 +49,6 @@
       <Project>{80b8d4dd-efd3-4ddc-90f0-360d8b194c47}</Project>
       <Name>Pokemon.Domain</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Pokemon.Repository\Pokemon.Repository.csproj">
-      <Project>{8dd63166-4842-41a5-a937-ff5db7367300}</Project>
-      <Name>Pokemon.Repository</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Pokemon.Service\Pokemon.Service.csproj">
       <Project>{fb7a3ce7-0642-4638-805e-da0291c3433e}</Project>
       <Name>Pokemon.Service</Name>
