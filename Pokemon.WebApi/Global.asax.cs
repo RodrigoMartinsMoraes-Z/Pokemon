@@ -1,5 +1,7 @@
 using Pokemon.Context;
 using Pokemon.Interfaces;
+using Pokemon.Repository.Masters;
+using Pokemon.Repository.Pokemons;
 
 using SimpleInjector;
 using SimpleInjector.Integration.Web.Mvc;
@@ -31,6 +33,11 @@ namespace Pokemon.WebApi
 
             // register the factory
             container.Register<IDbContextFactory<PokemonDbContext>, PokemonDbContextFactory>(Lifestyle.Singleton);
+
+            // register interfaces
+            container.Register<ICapturedPokemonsRepository, CapturedPokemonsRepository>(Lifestyle.Scoped);
+            container.Register<IMasterRepository, MasterRepository>(Lifestyle.Scoped);
+            container.Register<IPokemonRepository, PokemonRepository>(Lifestyle.Scoped);
 
             DependencyResolver.SetResolver(new SimpleInjectorDependencyResolver(container));
 

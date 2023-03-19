@@ -41,7 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ICapturedPokemonsRepository.cs" />
     <Compile Include="IContext.cs" />
+    <Compile Include="IMasterRepository.cs" />
+    <Compile Include="IPokemonRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

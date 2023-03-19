@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace Pokemon.Repository.Pokemons
 {
-    public class PokemonRepository
+    public class PokemonRepository : IPokemonRepository
     {
         private readonly IContext _context;
 
@@ -53,7 +53,7 @@ namespace Pokemon.Repository.Pokemons
             return await _context.Pokemons.FirstOrDefaultAsync(m => m.Name == name);
         }
 
-     
+
         /// <summary>
         /// Remove Pokemon by id
         /// </summary>

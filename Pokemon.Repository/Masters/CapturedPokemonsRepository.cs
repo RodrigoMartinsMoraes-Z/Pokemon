@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Pokemon.Repository.Masters
 {
-    public class CapturedPokemonsRepository
+    public class CapturedPokemonsRepository : ICapturedPokemonsRepository
     {
         private readonly IContext _context;
 
@@ -45,6 +45,11 @@ namespace Pokemon.Repository.Masters
             return Task.CompletedTask;
         }
 
+        /// <summary>
+        /// Remove a Pokemon from Master Pocket
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public Task RemovePokemonOfMasterPocket(int id)
         {
             _context.CapturedPokemons.Remove(_context.CapturedPokemons.Find(id));

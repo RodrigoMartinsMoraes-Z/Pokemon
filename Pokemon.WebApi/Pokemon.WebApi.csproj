@@ -354,6 +354,10 @@
       <Project>{D3BCFA15-2AC2-4F32-A383-4196F11C490B}</Project>
       <Name>Pokemon.Interfaces</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Pokemon.Repository\Pokemon.Repository.csproj">
+      <Project>{8DD63166-4842-41A5-A937-FF5DB7367300}</Project>
+      <Name>Pokemon.Repository</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

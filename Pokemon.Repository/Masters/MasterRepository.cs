@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace Pokemon.Repository.Masters
 {
-    public class MasterRepository
+    public class MasterRepository : IMasterRepository
     {
         private readonly IContext _context;
 
