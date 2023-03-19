@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Masters\CapturedPokemonsRepository.cs" />
     <Compile Include="Masters\MasterRepository.cs" />
     <Compile Include="Pokemons\PokemonRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
