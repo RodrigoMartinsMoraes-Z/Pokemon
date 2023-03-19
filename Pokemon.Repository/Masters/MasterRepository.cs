@@ -10,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-namespace Pokemon.Repository.Master
+namespace Pokemon.Repository.Masters
 {
     public class MasterRepository
     {
@@ -44,7 +44,6 @@ namespace Pokemon.Repository.Master
         {
             return await _context.Masters.FindAsync(id);
         }
-
 
         /// <summary>
         /// Get Master from Email
