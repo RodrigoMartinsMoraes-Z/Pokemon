@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Pokemon.WebApi.Models.Pokemons
+namespace Pokemon.Models.Pokemons
 {
     public class PokemonModel
     {     

@@ -1,8 +1,8 @@
-﻿using Pokemon.WebApi.Models.Pokemons;
+﻿using Pokemon.Models.Pokemons;
 
 using System.Collections.Generic;
 
-namespace Pokemon.WebApi.Models.Masters
+namespace Pokemon.Models.Masters
 {
     public class MasterModel
     {

@@ -9,6 +9,10 @@ namespace Pokemon.Context
 {
     public class PokemonDbContextFactory : IDbContextFactory<PokemonDbContext>
     {
+        public PokemonDbContextFactory()
+        {
+            
+        }
         public PokemonDbContext Create()
         {
             return new PokemonDbContext();
