@@ -48,7 +48,7 @@ namespace Pokemon.Repository.Pokemons
         /// </summary>
         /// <param name="name"></param>
         /// <returns></returns>
-        public async Task<Domain.Pokemons.Pokemon> GetByEmail(string name)
+        public async Task<Domain.Pokemons.Pokemon> GetByName(string name)
         {
             return await _context.Pokemons.FirstOrDefaultAsync(m => m.Name == name);
         }

@@ -46,6 +46,7 @@
     <Compile Include="IMasterRepository.cs" />
     <Compile Include="IPokemonRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\IPokemonService.cs" />
     <Compile Include="Services\IMasterService.cs" />
   </ItemGroup>
   <ItemGroup>

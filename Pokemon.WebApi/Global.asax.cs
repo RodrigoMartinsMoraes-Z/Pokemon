@@ -61,6 +61,7 @@ namespace Pokemon.WebApi
             container.Register<IPokemonRepository, PokemonRepository>();
 
             container.Register<IMasterService, MasterService>();
+            container.Register<IPokemonService, PokemonService>();
 
             // register Auto Mapper
             var mapperConfig = new MapperConfiguration(cfg =>
