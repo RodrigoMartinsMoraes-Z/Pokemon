@@ -31,6 +31,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pokemon.AutoMapper", "Pokem
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pokemon.Models", "Pokemon.Models\Pokemon.Models.csproj", "{C995593C-A75C-45EC-87EA-3E86E414B994}"
 EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{C3BF8B4E-9E79-4104-AFA9-FAEEDFEEB328}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +71,10 @@ Global
 		{C995593C-A75C-45EC-87EA-3E86E414B994}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C995593C-A75C-45EC-87EA-3E86E414B994}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C995593C-A75C-45EC-87EA-3E86E414B994}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3BF8B4E-9E79-4104-AFA9-FAEEDFEEB328}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3BF8B4E-9E79-4104-AFA9-FAEEDFEEB328}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3BF8B4E-9E79-4104-AFA9-FAEEDFEEB328}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3BF8B4E-9E79-4104-AFA9-FAEEDFEEB328}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

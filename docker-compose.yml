@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  pokemon.webapi:
+    image: ${DOCKER_REGISTRY-}pokemonwebapi
+    build:
+      context: .\Pokemon.WebApi
+      dockerfile: Dockerfile
