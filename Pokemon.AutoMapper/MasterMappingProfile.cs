@@ -15,8 +15,8 @@ namespace Pokemon.AutoMapper
     {
         public MasterMappingProfile()
         {
-            CreateMap<MasterModel, Master>();
-            CreateMap<Master, MasterModel>();
+            CreateMap<MasterModel, Master>().ForMember(dest => dest.PokeList, opt => opt.Ignore());
+            CreateMap<Master, MasterModel>().ForMember(dest => dest.PokeList, opt => opt.Ignore());
         }
     }
 }

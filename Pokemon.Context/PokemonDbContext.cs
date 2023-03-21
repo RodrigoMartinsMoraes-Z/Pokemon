@@ -26,6 +26,10 @@ namespace Pokemon.Context
             base.OnModelCreating(modelBuilder);
         }
 
-    
+        public bool Exist()
+        {
+            return this.Database.Exists();
+        }
+
     }
 }

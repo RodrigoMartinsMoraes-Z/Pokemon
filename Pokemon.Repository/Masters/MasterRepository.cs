@@ -19,6 +19,9 @@ namespace Pokemon.Repository.Masters
         public MasterRepository(IContext context)
         {
             _context = context;
+
+            if (!_context.Exist())
+                throw new Exception("Db Dont Exist.");
         }
 
         /// <summary>

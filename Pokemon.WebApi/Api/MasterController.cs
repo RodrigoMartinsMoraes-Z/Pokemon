@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Pokemon.Interfaces.Services;
 using Pokemon.Models.Masters;
 
+using System;
 using System.Threading.Tasks;
 using System.Web.Http;
 
@@ -21,11 +22,18 @@ namespace Pokemon.WebApi.Api
 
         [HttpPost]
         [Route("new-master")]
-        public async Task<IActionResult> NewMaster(MasterModel model)
+        public async Task<IHttpActionResult> NewMaster(MasterModel model)
         {
-            var response = await _masterService.AddMaster(model);
+            try
+            {
+                var response = await _masterService.AddMaster(model);
 
-            return (IActionResult)Ok(response);
+                return Ok(response);
+            }
+            catch(Exception e)
+            {
+                return BadRequest(e.Message);
+            }
         }
     }
 }

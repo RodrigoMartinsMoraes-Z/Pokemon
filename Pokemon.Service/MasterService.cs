@@ -14,14 +14,15 @@ namespace Pokemon.Service
         private readonly IMasterRepository _masterRepository;
         private readonly IMapper _mapper;
 
-        public MasterService(IMasterRepository masterRepository, IMapper mapper)
+        public MasterService(IMasterRepository masterRepository,IMapper mapper)
         {
             _masterRepository = masterRepository;
             _mapper = mapper;
         }
 
         public async Task<Master> AddMaster(MasterModel model)
-        {
+        {    
+
             var master = _mapper.Map<Master>(model);
 
             return await _masterRepository.AddOrUpdate(master);
