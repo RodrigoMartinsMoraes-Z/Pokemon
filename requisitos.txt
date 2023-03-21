@@ -2,4 +2,4 @@ Requisitos para executar
 
 .netframework 4.8.1
 
-banco de dados SQLite criado com o nome PokemonDb na pasta raiz da solução (arquivo ja incluso no git para facilitar)
+estrutura de pastas C://SQLite disponivel, ou basta alterar no web.config do projeto WebApi (utilizar o caminho relativo)
