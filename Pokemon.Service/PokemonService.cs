@@ -19,12 +19,14 @@ namespace Pokemon.Service
     public class PokemonService : IPokemonService
     {
         private readonly IPokemonRepository _pokemonRepository;
+        private readonly ICapturedPokemonsRepository _capturedPokemonsRepository;
         private readonly IMapper _mapper;
 
-        public PokemonService(IPokemonRepository pokemonRepository, IMapper mapper)
+        public PokemonService(IPokemonRepository pokemonRepository, IMapper mapper, ICapturedPokemonsRepository capturedPokemonsRepository)
         {
             _pokemonRepository = pokemonRepository;
             _mapper = mapper;
+            _capturedPokemonsRepository = capturedPokemonsRepository;
         }
 
         public async Task<PokemonModel> GetPokemonById(int id)
@@ -42,6 +44,20 @@ namespace Pokemon.Service
                 pokemon = await GetFromPokeApi(name);
 
             return _mapper.Map<PokemonModel>(pokemon);
+        }
+
+        public async Task SetAsCaptured(int pokemonId, int masterId)
+        {
+
+            await _capturedPokemonsRepository.AddPokemonToMasterPocket(masterId: masterId, pokemonId: pokemonId);
+
+        }
+
+        public async Task<List<PokemonModel>> GetCapturedPokemons(int masterId)
+        {
+            var pokemonList = await _capturedPokemonsRepository.GetCapturedPokemonsByMasterId(masterId);
+
+            return _mapper.Map<List<PokemonModel>>(pokemonList);
         }
 
         private async Task<Domain.Pokemons.Pokemon> GetFromPokeApi(string name)

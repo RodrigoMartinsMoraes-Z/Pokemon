@@ -8,7 +8,7 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web.Http;
 
-namespace Pokemon.WebApi.Controllers
+namespace Pokemon.WebApi.Api
 {
     [RoutePrefix("api/Pokemon")]
     public class PokemonController : ApiController
@@ -20,9 +20,17 @@ namespace Pokemon.WebApi.Controllers
             _pokemonService = pokemonService;
         }
 
+        [HttpGet]
         public async Task<IHttpActionResult> GetPokemon(string name)
         {
             return Ok(await _pokemonService.GetPokemonByName(name));
+        }
+
+        public async Task<IHttpActionResult> GetCapturedPokemonsByMaster(int masterId)
+        {
+            var pokemonList = await _pokemonService.GetCapturedPokemons(masterId);
+
+            return Ok(pokemonList);
         }
     }
 }

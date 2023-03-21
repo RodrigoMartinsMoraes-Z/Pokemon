@@ -12,5 +12,7 @@ namespace Pokemon.Interfaces.Services
     {
         Task<PokemonModel> GetPokemonById(int id);
         Task<PokemonModel> GetPokemonByName(string name);
+        Task SetAsCaptured(int pokemonId, int masterId);
+        Task<List<PokemonModel>> GetCapturedPokemons(int masterId);
     }
 }
