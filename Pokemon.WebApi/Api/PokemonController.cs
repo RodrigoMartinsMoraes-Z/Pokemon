@@ -21,16 +21,28 @@ namespace Pokemon.WebApi.Api
         }
 
         [HttpGet]
+        [Route("GetPokemon")]
         public async Task<IHttpActionResult> GetPokemon(string name)
         {
             return Ok(await _pokemonService.GetPokemonByName(name));
         }
-
+                
+        [HttpGet]
+        [Route("GetCaptured")]
         public async Task<IHttpActionResult> GetCapturedPokemonsByMaster(int masterId)
         {
             var pokemonList = await _pokemonService.GetCapturedPokemons(masterId);
 
             return Ok(pokemonList);
+        }
+
+        [HttpPost]
+        [Route("SetAsCaptured")]
+        public async Task<IHttpActionResult> SetPokemonAsCaptured(int pokemonId, int masterId)
+        {
+            await _pokemonService.SetAsCaptured(pokemonId, masterId);
+
+            return Ok();
         }
     }
 }

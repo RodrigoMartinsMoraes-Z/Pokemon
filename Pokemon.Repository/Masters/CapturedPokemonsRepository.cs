@@ -41,6 +41,7 @@ namespace Pokemon.Repository.Masters
         public Task AddPokemonToMasterPocket(int masterId, int pokemonId)
         {
             _context.CapturedPokemons.Add(new Domain.Masters.CapturedPokemons { MasterId = masterId, PokemonId = pokemonId });
+            _context.SaveChanges();
 
             return Task.CompletedTask;
         }
