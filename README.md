@@ -13,6 +13,9 @@ para executar:
 
 .netframework 4.8.1
 
-banco de dados SQLite criado com o nome PokemonDb na pasta raiz da solução (se não houver, quando o banco for ser utilizado, ele deve ser criado automaticamente)
+estrutura de pastas C://SQLite disponivel, ou basta alterar no web.config do projeto WebApi (utilizar o caminho absoluto)
 
-OBS: Não está funcionando no momento pois estou recebendo um erro, provavelmente relacionado a injeção de dependencia, assim que eu descobrir como resolver, continuo com a solução. A idéia é ainda criar um serviço para consumir a API "pokeapi" para buscar os dados dos pokemons que não estejam no banco de dados, não foi feito ainda pois o básico do projeto não está funcionando. O serviço para consumir a "pokeapi" é relativamente simples, e não deve levar tempo para ser feito.
+
+Dificuldades encontradas:
+Configurar o SQLite, demorou um pouco para perceber que eu deveria utilizar caminho absoluto, além de problemas com dll.
+Configuração do swagger com SimpleInjector, o problema que aparecia era no registro das interfaces, mas o real problema era o registro do swagger com simpleinjector.
